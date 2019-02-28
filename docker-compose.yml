@@ -1,0 +1,30 @@
+version: '3.4'
+services:
+  nginx:
+    image: eagleenergy/glpi-nginx
+    container_name: glpi-nginx
+    # volumes:
+    #  - type : bind
+    #    source: ./config
+    #    target: /var/www/glpi/config
+    ports:
+      - "8080:80"
+
+  mysql:
+   image: mysql:5.7
+   container_name: glpi-mysql
+   # volumes:
+   #  - ./glpi.sql:/docker-entrypoint-initdb.d/glpi.sql
+   environment:
+     MYSQL_ROOT_PASSWORD: 'CORRECT-HORSE-BATTERY-STAPLE'
+     MYSQL_DATABASE: 'glpi'
+     MYSQL_USER: 'glpi'
+     MYSQL_PASSWORD: 'OTHER-CORRECT-HORSE-BATTERY-STAPLE'
+
+  fpm:
+    image: eagleenergy/glpi-fpm
+    # volumes:
+    #  - type : bind
+    #    source: ./config
+    #    target: /var/www/glpi/config
+    container_name: glpi-fpm
