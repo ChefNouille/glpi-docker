@@ -14,7 +14,7 @@ services:
    image: mysql:5.7
    container_name: glpi-mysql
    volumes:
-     - mysql/data:/var/lib/mysql
+     - ./mysql/data:/var/lib/mysql
    #  - ./glpi.sql:/docker-entrypoint-initdb.d/glpi.sql
    environment:
      MYSQL_ROOT_PASSWORD: 'CORRECT-HORSE-BATTERY-STAPLE'

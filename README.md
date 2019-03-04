@@ -9,7 +9,14 @@
 
 Actually the GLPI version embedded in docker images is GLPI 9.4.0
 
-Just run:
+### Make MySQL datas directory
+
+```bash
+mkdir -p mysql/data
+```
+
+### Start containers
+
 ```bash
 docker-compose up
 ```
