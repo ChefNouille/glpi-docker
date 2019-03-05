@@ -8,7 +8,8 @@ RUN apk update && apk upgrade && apk add --no-cache openldap-dev \
   g++ \
   gcc \
   make
-RUN docker-php-ext-install ldap \
+RUN docker-php-ext-install opcache \
+  ldap \
   gd \
   mysqli \
   imap \
