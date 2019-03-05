@@ -27,6 +27,9 @@ GLPI will be accessible here: http://localhost:8080
 
 This support only GLPI >= 9.3.0 due to a database migration to InnoDB Engine not available in 9.4.0 archive
 
+Please upgrade your GLPI to 9.3.0 before and migrate your tables by executing `scripts/innodb_migration.php`.
+(https://glpi-project.org/glpi-9-3-itsm-software/#MYSQL-InnoDB-engine)
+
 ##### Backup
 
 On your old serveur, make a backup of your GLPI database.
